@@ -3,10 +3,10 @@ import random
 number = random.randint(-10, 10)
 
 if number > 0:
-    status = "positive"
+    result = "positive"
 elif number < 0:
-    status = "negative"
+    result = "negative"
 else:
-    status = "zero"
+    result = "zero"
 
-print(f"{number:d} is {status}")
+print(f"{number:d} is {result}")
