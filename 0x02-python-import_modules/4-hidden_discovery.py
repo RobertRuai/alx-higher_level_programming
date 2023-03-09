@@ -5,4 +5,4 @@ if __name__ == "__main__":
     lines = dir(hidden_4)
     for lines in hidden_4:
         if line[0:2] != "__":
-            print("{}\n".format(line))
+            print("{}".format(line))
