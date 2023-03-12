@@ -3,9 +3,10 @@ def multiple_returns(sentence):
     res = []
     a = len(tuple(sentence))
     res.append(a)
+    first = sentence[0]
     if sentence[:] == "":
-        return None
+        first = None
+        res.append(first)
     else:
-        first = sentence[0]
         res.append(first)
     return res
