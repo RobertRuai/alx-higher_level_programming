@@ -2,11 +2,11 @@
 def multiple_returns(sentence):
     res = []
     a = len(tuple(sentence))
-    res.append(a)
     first = sentence[0]
-    if sentence[:] == "":
+    if  not sentence:
         first = None
-        res.append(first)
+        res.append(0, first)
     else:
+        res.append(a)
         res.append(first)
     return res
