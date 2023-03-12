@@ -4,8 +4,7 @@ def multiple_returns(sentence):
     a = len(tuple(sentence))
     first = sentence[0]
     if  not sentence:
-        first = None
-        res.append(0, first)
+        return(0, "None")
     else:
         res.append(a)
         res.append(first)
