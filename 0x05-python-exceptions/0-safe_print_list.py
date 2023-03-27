@@ -5,9 +5,9 @@ def safe_print_list(my_list=[], x=0):
         try:
             my_list[i]
         except Exception as e:
-            print(end= '')
+            print(end='')
         else:
             count += 1
-            print(my_list[i], end= '')
+            print(my_list[i], end='')
     print()
     return count
