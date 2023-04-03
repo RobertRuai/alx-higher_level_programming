@@ -49,4 +49,4 @@ class Rectangle:
             return s
         for i in range(self.height):
             s = s + '#' * self.width + '\n'
-        return s
+        return s[:-1]
