@@ -35,7 +35,7 @@ if len(sys.argv) != 2:
 
 try:
     N = int(sys.argv[1])
-except:
+except Exception:
     error_exit("N must be a number")
 
 if N < 4:
