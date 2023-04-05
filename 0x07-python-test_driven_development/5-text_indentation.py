@@ -9,5 +9,5 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    lines = text.replace(".", ".\n\n").replace("?", "?\n\n").replace(":", ":\n\n")
+    lines = text.replace(". ", ".\n\n").replace("? ", "?\n\n").replace(": ", ":\n\n")
     print(lines)
