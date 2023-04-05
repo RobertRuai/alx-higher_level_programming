@@ -21,12 +21,18 @@ Success Tests:
     John
     <BLANKLINE>
 
+    >>> text_indentation('12')
+    12
+
 Failed Tests:
 
-    >>> text_indentation(10)
+    >>> text_indentation(12)
     Traceback (most recent call last):
     ...
     TypeError: text must be a string
+
+    >>> text_indentation("John ")
+    John 
  
     >>> text_indentation()
     Traceback (most recent call last):
