@@ -1,0 +1,51 @@
+=============================
+  0-add_integer 
+=============================
+
+# python3 -m doctest -v ./tests/0-add_integer.txt
+
+Import function:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Success Tests:
+
+Test integers and floats:
+
+    >>> add_integer(1, 2)
+    3
+
+    >>> add_integer(1, -2)
+    -1
+
+    >>> add_integer(1.4, 2)
+    3
+
+    >>> add_integer(2)
+    100
+
+Failed tests:
+
+    >>> add_integer(1, "2")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer(float('inf'), 0)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer("1", 2)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
