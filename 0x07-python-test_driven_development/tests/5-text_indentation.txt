@@ -27,13 +27,29 @@ Success Tests:
 
     >>> text_indentation("John\n")
     John
-    <BLANKLINE>
 
     >>> text_indentation(":John")
-    :John
+    :
+    <BLANKLINE>
+    John
 
     >>> text_indentation('12')
     12
+
+    >>> text_indentation("    Holberton    ")
+    Holberton
+
+    >>> text_indentation("    Hello    .")
+    Hello    .
+    <BLANKLINE>
+
+    >>> text_indentation(".?:")
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
 
 Failed Tests:
 
@@ -43,7 +59,7 @@ Failed Tests:
     TypeError: text must be a string
 
     >>> text_indentation("John ")
-    John 
+    John
 
     >>> text_indentation(None)
     Traceback (most recent call last):
