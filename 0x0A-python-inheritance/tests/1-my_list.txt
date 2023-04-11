@@ -24,3 +24,10 @@ Test cases:
     >>> my_list = MyList(["c", "d", "a", "e", "b"])
     >>> my_list.print_sorted()
     ['a', 'b', 'c', 'd', 'e']
+
+    >>> my_list = MyList([1, "a"])
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+    ...
+    TypeError: '<' not supported between instances of 'str' and 'int'
+
