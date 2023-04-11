@@ -37,3 +37,15 @@ Test cases:
 
     >>> issubclass(MyList, list)
     True
+
+    >>> my_list = MyList(1)
+    Traceback (most recent call last):
+    ...
+    TypeError: 'int' object is not iterable
+
+    >>> my_list.print_sorted([1, 3, 2])
+    Traceback (most recent call last):
+    ...
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+
