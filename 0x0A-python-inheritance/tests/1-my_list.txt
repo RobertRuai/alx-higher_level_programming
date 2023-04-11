@@ -31,3 +31,7 @@ Test cases:
     ...
     TypeError: '<' not supported between instances of 'str' and 'int'
 
+    >>> my_list = MyList([-4, 2, 3, 1, 5])
+    >>> my_list.print_sorted()
+    [-4, 1, 2, 3, 5]
+
