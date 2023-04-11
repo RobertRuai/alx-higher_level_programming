@@ -6,6 +6,11 @@ importing function:
     >>> MyList = __import__('1-my_list').MyList
 
 Test cases:
+
+    >>> my_list = MyList()
+    >>> my_list
+    []
+
     >>> my_list =MyList([1, 2, 9, 3, 7])
     >>> print(my_list)
     [1, 2, 9, 3, 7]
@@ -24,6 +29,10 @@ Test cases:
     >>> my_list = MyList(["c", "d", "a", "e", "b"])
     >>> my_list.print_sorted()
     ['a', 'b', 'c', 'd', 'e']
+
+    >>> my_list = MyList("john")
+    >>> my_list
+    ['j', 'o', 'h', 'n']
 
     >>> my_list = MyList([1, "a"])
     >>> my_list.print_sorted()
