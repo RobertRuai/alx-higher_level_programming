@@ -16,4 +16,4 @@ class Student():
                 if i in attrs:
                     n[i] = self.__dict__[i]
             return n
-        return self.__dict__            
+        return self.__dict__
