@@ -9,4 +9,4 @@ class MyInt(int):
         return int(self) != op
 
     def __ne__(self, op):
-        return int(self) == op        
+        return int(self) == op
