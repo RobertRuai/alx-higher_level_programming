@@ -10,7 +10,7 @@ args = sys.argv
 filename = "add_item.json"
 
 with open(filename, mode='a+') as file:
-    my_list = args[1:]
-    my_list.extend(args[1:])
+    my_list = load_from_json_file(filename)
+    for i in args[1:]:
+        my_list.append(i)
     save_to_json_file(my_list, filename)
-    load_from_json_file(filename)
