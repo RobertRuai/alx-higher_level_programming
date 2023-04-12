@@ -17,3 +17,7 @@ class Student():
                     n[i] = self.__dict__[i]
             return n
         return self.__dict__
+
+    def reload_from_json(self, json):
+        for i, j in json.items():
+            setattr(self, i, j)
