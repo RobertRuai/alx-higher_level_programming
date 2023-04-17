@@ -4,7 +4,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-     """This class inherits from Base and defines a Rectangle object.
+    """This class inherits from Base and defines a Rectangle object.
     Attributes:
         __width (int): the width of the rectangle.
         __height (int): the height of the rectangle.
