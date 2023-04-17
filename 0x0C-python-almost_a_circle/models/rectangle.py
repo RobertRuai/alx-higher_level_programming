@@ -72,22 +72,21 @@ class Rectangle(Base):
 
     def area(self):
         """Returns the area"""
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """prints rectangle using #"""
-        if self.__y:
-            print("\n" * self.__y, end='')
+        if self.y:
+            print("\n" * self.y, end='')
         for i in range(self.height):
-            if self.__x:
-                print(" " * self.__x, end='')
+            if self.x:
+                print(" " * self.x, end='')
             print('#' * self.width)
 
     def __str__(self):
         """prints rectangle in str format"""
-        return "[Rectangle] (" + str(self.id) + ") " + str(
-            self.__x) + "/" + str(self.__y) + " - " + str(
-                self.__width) + "/" + str(self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
         """updates rectangle by assigning attrs to args and kwargs"""
@@ -114,8 +113,8 @@ class Rectangle(Base):
         """prints dict repr"""
         return {
             'id': self.id,
-            'width': self.__width,
-            'height': self.__height,
-            'x': self.__x,
-            'y': self.__y
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
                }

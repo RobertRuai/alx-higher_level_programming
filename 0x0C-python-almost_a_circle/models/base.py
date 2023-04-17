@@ -19,7 +19,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """Returns json string repr of list_dictionaries"""
-        if list_dictionaries is None:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return []
         return json.dumps(list_dictionaries)
 
@@ -27,11 +27,11 @@ class Base:
     def save_to_file(cls, list_objs):
         """Saves instances as json strings """
         n_list = []
-        if list_objs is not None:
+        if list_objs is not None and len(list_objs) > 0:
             for ob in list_objs:
-                n_list.append(cls.to_dictionary(ob))
-        with open("{:s}.json".format(cls.__name__), mode='w') as file:
-            file.write(cls.to_json_string(n_list))
+                n_list.append(ob.to_dictionary())
+        with open(cls.__name__ + ".json", 'w') as file:
+            file.write(Base.to_json_string(n_list))
 
     @staticmethod
     def from_json_string(json_string):
