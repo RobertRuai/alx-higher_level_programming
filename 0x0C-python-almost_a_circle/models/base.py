@@ -9,6 +9,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """ init function  """
         if id is not None:
             self.id = id
         else:
@@ -17,12 +18,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """Returns json string repr of list_dictionaries"""
         if list_dictionaries is None:
             return []
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """Saves instances as json strings """
         n_list = []
         if list_objs is not None:
             for ob in list_objs:
@@ -32,12 +35,14 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """Returns Python obj from a json string repr"""
         if json_string is None:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        """Returns instance with set attrs"""
         dummy = {}
         if cls.__name__ == "rectangle":
             dummy = cls(2, 4)
@@ -48,6 +53,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """Returns instances in a list"""
         filename = ".json".format(cls.__name__)
         a_list = []
 
