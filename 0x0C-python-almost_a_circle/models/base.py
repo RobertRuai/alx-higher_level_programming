@@ -60,7 +60,7 @@ class Base:
             return []
 
         with open(filename, 'r') as file:
-            n_list = cls.from_json_string(file.read())
+            n_list = Base.from_json_string(file.read())
         for i, j in enumerate(n_list):
             a_list.append(cls.create(n_list[i]))
-        return
+        return n_list
