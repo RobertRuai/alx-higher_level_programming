@@ -43,6 +43,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Returns instance with set attrs"""
+        dummy = {}
         if cls.__name__ == "rectangle":
             dummy = cls(2, 4)
 	else:
@@ -63,4 +64,4 @@ class Base:
             n_list = cls.from_json_string(file.read())
         for i, j in enumerate(n_list):
             a_list.append(cls.create(n_list[i]))
-        return
+        return n_list
