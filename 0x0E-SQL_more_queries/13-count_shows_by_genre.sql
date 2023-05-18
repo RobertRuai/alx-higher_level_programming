@@ -1,7 +1,7 @@
 --a script that lists all shows contained in hbtn_0d_tvshows
 
 SELECT g.name AS genre, COUNT(tg.genre_id) AS number_of_shows
-	FROM tv_genres g
+	FROM tv_genres tg
 JOIN tv_show_genres tg
 	ON g.id = tg.genre_id
 GROUP BY g.name
