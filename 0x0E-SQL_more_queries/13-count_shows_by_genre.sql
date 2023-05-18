@@ -1,4 +1,4 @@
---a script that lists all shows contained in hbtn_0d_tvshows
+-- a script that lists all shows contained in hbtn_0d_tvshows
 
 SELECT g.name AS genre, COUNT(tg.genre_id) AS number_of_shows
 	FROM tv_genres tg
