@@ -12,11 +12,10 @@ if __name__ == "__main__":
                            db=sys.argv[3])
     cur = conn.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE name LIKE '{:s}' OR '1'= '1' ORDER BY states.id ASC;"
-        .format(sys.argv[4]))
+        "SELECT * FROM states WHERE name = %s\
+         ORDER BY states.id ASC", (sys.argv[4], ))
     rows = cur.fetchall()
     for row in rows:
-        if sys.argv[4] in row:
-            print(row)
+        print(row)
     cur.close()
     conn.close()
