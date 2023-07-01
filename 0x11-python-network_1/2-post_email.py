@@ -12,4 +12,4 @@ if __name__ == "__main__":
     with urllib.request.urlopen(req) as res:
         if res:
             html = res.read()
-            print(html.decode('utf-8'))
+            print(html.decode("utf-8"))
