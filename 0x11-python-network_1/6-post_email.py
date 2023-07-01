@@ -8,4 +8,3 @@ if __name__ == "__main__":
     val = {'email': sys.argv[2]}
     res = requests.post(url, data=val)
     print(res)
-
