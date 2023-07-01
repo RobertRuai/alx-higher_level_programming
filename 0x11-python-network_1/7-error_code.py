@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""manage urllib.error.HTTPError exceptions and print error codes"""
+"""manage HTTPError exceptions and print error codes"""
 import requests
 import sys
 
 if __name__ == "__main__":
-    try:
-        res = requests.get(sys.argv[1])
-        print(res.text)
-    except:
+    res = requests.get(sys.argv[1])
+    if res.status_code >= 400:
         print("Error code: {}".format(res.status_code))
+    print(res.text)
