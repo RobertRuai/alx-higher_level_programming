@@ -6,7 +6,6 @@ const request = require('request');
 request(url, function (error, response, body) {
   if (error) console.log(error);
   res = {}
-  count = 0
   const jsn = JSON.parse(body);
   for (let i = 0; i < jsn.length; i++) {
     if (jsn[i].completed == true) {
