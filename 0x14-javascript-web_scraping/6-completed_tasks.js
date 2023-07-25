@@ -10,8 +10,8 @@ request(url, function (error, response, body) {
     const jsn = JSON.parse(body);
     for (let i = 0; i < jsn.length; i++) {
       if (jsn[i].completed == true) {
-        if (!res[jsn[i].userId]) res[jsn[i].userId] = 1;
-        else res[jsn[i].userId] += 1;
+        if (res[jsn[i].userId] == undefined) res[jsn[i].userId] = 1;
+        else res[jsn[i].userId]++;
       }
     }
     console.log(res);
